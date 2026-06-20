@@ -1,0 +1,66 @@
+---
+- name: Aprovisionamiento Router CSR1000v
+  hosts: routers
+  gather_facts: no
+
+  vars_files:
+    - ../vars/vars_001V-22.yaml
+
+  tasks:
+
+    - name: Obtener running-config
+      ios_command:
+        commands:
+          - show running-config
+      register: running
+
+    - name: Guardar respaldo
+      copy:
+        content: "{{ running.stdout[0] }}"
+        dest: "respaldo/backup_001V-22.cfg"
+
+    - name: Configurar hostname
+      ios_config:
+        lines:
+          - hostname {{ router.hostname }}
+
+    - name: Configurar banner
+      ios_config:
+        lines:
+          - banner motd ^{{ servicios.banner }}^
+
+    - name: Configurar servidor NTP
+      ios_config:
+        lines:
+          - ntp server {{ servicios.ntp }}
+
+    - name: Configurar descripción WAN
+      ios_config:
+        parents: interface {{ interfaces.wan.nombre }}
+        lines:
+          - description {{ interfaces.wan.descripcion }}
+
+    - name: Crear Loopback10
+      ios_config:
+        parents: interface Loopback{{ loopback.numero }}
+        lines:
+          - ip address {{ loopback.ip }} {{ loopback.mascara }}
+
+    - name: Habilitar NETCONF
+      ios_config:
+        lines:
+          - netconf-yang
+
+    - name: Habilitar HTTPS
+      ios_config:
+        lines:
+          - ip http secure-server
+
+    - name: Habilitar RESTCONF
+      ios_config:
+        lines:
+          - restconf
+
+    - name: Guardar configuración
+      ios_config:
+        save_when: modified

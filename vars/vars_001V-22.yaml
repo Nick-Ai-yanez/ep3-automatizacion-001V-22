@@ -1,0 +1,26 @@
+alumno:
+  codigo: "001V-22"
+  nombre: "Nicolás Paulo Andres Yañez Flores"
+
+cliente:
+  empresa: "Redes Corporativas SpA"
+
+router:
+  hostname: "RTR-REDCORP"
+  ip: "192.168.56.103"
+  usuario: "cisco"
+  password: "cisco123!"
+
+interfaces:
+  wan:
+    nombre: "GigabitEthernet1"
+    descripcion: "Enlace-WAN-Ovalle"
+
+loopback:
+  numero: 10
+  ip: "10.1.22.1"
+  mascara: "255.255.255.0"
+
+servicios:
+  banner: "ACCESO RESTRINGIDO - REDCORP"
+  ntp: "8.8.8.8"
