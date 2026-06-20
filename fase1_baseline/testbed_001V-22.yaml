@@ -1,0 +1,19 @@
+testbed:
+  name: EP3
+  credentials:
+    default:
+      username: cisco
+      password: cisco123!
+
+devices:
+  CSR1kv:
+    os: iosxe
+    type: router
+    alias: uut
+
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.168.56.103
+        port: 22
+        ssh_options: -o KexAlgorithms=diffie-hellman-group14-sha1
