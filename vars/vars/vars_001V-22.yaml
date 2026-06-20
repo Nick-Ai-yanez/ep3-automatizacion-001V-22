@@ -1,0 +1,19 @@
+alumno:
+  codigo: "001V-22"
+  nombre: "Nicolás Yañez"
+
+cliente:
+  empresa: "Redes Corporativas SpA"
+
+router:
+  ip: "192.168.56.103"
+  usuario: "cisco"
+  password: "cisco123!"
+  hostname: "RTR-REDCORP"
+  loopback_id: 10
+  loopback_ip: "10.1.22.1"
+  loopback_mask: "255.255.255.0"
+  loopback_prefix: "24"
+  descripcion_wan: "Enlace-WAN-Ovalle"
+  banner: "ACCESO RESTRINGIDO - REDCORP"
+  ntp_server: "8.8.8.8"
