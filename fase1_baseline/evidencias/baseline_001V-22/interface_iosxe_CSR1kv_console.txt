@@ -21,12 +21,12 @@ GigabitEthernet1 is up, line protocol is up
   Output queue: 0/40 (size/max)
   5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     279 packets input, 26598 bytes, 0 no buffer
+     494 packets input, 42908 bytes, 0 no buffer
      Received 0 broadcasts (0 IP multicasts)
      0 runts, 0 giants, 0 throttles 
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
      0 watchdog, 0 multicast, 0 pause input
-     423 packets output, 68895 bytes, 0 underruns
+     758 packets output, 125004 bytes, 0 underruns
      0 output errors, 0 collisions, 0 interface resets
      0 unknown protocol drops
      0 babbles, 0 late collision, 0 deferred
@@ -37,10 +37,10 @@ CSR1kv#
 show interfaces accounting
 GigabitEthernet1 VBox
                 Protocol    Pkts In   Chars In   Pkts Out  Chars Out
-                   Other          2         84          4        240
-                      IP        267      26662        419      63579
-                     ARP          2         84          4        240
-                    IPv6         12       1032          0          0
+                   Other          3        126          5        300
+                      IP        473      42224        753     115608
+                     ARP          3        126          5        300
+                    IPv6         20       1738          0          0
 CSR1kv#
 +++ CSR1kv: executing command 'show ip interface' +++
 show ip interface

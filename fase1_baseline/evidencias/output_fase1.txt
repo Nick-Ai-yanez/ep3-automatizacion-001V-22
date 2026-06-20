@@ -2,18 +2,12 @@
 BASELINE SNAPSHOT
 Alumno : 001V-22
 Nombre : Nicolás Yañez
-Fecha : Sat 20 Jun 2026 05:22:07 AM UTC
+Fecha : Sat 20 Jun 2026 05:29:48 AM UTC
 Host : labvm
 ==================================
 
 Learning '['interface', 'platform', 'routing']' on devices '['CSR1kv']'
-[1m[31m
-failed to connect to CSR1kv
-Failed while bringing device to "any" state[0m[39m
-
-
-Learning '['interface', 'platform', 'routing']' on devices '['CSR1kv']'
-  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:01<00:02,  1.27s/it] 67%|██████▋   | 2/3 [00:10<00:03,  3.76s/it]100%|██████████| 3/3 [00:11<00:00,  2.87s/it]100%|██████████| 3/3 [00:11<00:00,  3.88s/it]+==============================================================================+
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:01<00:02,  1.26s/it] 67%|██████▋   | 2/3 [00:10<00:03,  3.76s/it]100%|██████████| 3/3 [00:11<00:00,  2.86s/it]100%|██████████| 3/3 [00:11<00:00,  3.87s/it]+==============================================================================+
 | Genie Learn Summary for device CSR1kv                                        |
 +==============================================================================+
 |  Connected to CSR1kv                                                         |
